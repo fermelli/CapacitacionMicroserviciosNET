@@ -59,6 +59,31 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "ObtenerTodas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5002/api/factura",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"factura"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

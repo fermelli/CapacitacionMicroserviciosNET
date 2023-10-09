@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose-base-datos.yml = docker-compose-base-datos.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguridad", "Seguridad\Seguridad.csproj", "{D9D92E95-16D2-44E0-8178-108EE6AC5A71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguridad", "Seguridad\Seguridad.csproj", "{D9D92E95-16D2-44E0-8178-108EE6AC5A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factura", "Factura\Factura.csproj", "{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D9D92E95-16D2-44E0-8178-108EE6AC5A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9D92E95-16D2-44E0-8178-108EE6AC5A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9D92E95-16D2-44E0-8178-108EE6AC5A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
