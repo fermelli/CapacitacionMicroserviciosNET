@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factura", "Factura\Factura.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pago", "Pago\Pago.csproj", "{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaccion", "Transaccion\Transaccion.csproj", "{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

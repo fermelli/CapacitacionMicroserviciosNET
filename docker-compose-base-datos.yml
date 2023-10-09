@@ -33,6 +33,17 @@ services:
     - 33061:33060
     networks:
     - mi-red
+  service-mongo:
+    image: mongo:5.0.2
+    container_name: database-mongo
+    restart: always
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=fermelli
+    - MONGO_INITDB_ROOT_PASSWORD=Mellizo55
+    ports:
+    - 27018:27017
+    networks:
+    - mi-red
 
 networks:
    mi-red:

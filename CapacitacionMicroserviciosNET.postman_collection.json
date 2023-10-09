@@ -138,6 +138,32 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Transaccion",
+			"item": [
+				{
+					"name": "ObtenerFacturaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5004/api/transaccion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"transaccion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
