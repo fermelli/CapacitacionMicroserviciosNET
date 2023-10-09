@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguridad", "Seguridad\Segu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factura", "Factura\Factura.csproj", "{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pago", "Pago\Pago.csproj", "{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -84,6 +84,60 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Pago",
+			"item": [
+				{
+					"name": "ObtenerTodos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/pago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"pago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Depositar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_factura\": 1,\r\n    \"monto\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/pago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"pago"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
