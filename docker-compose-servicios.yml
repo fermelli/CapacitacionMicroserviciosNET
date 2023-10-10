@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  rabbitmq-service:
+    image: rabbitmq:3.8.13-management
+    container_name: rabbitmq-service
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=Mellizo55
+      - RABBITMQ_DEFAULT_PASS=Mellizo55
+    ports:
+    - 5672:5672
+    - 15672:15672
+    networks:
+    - mi-red
+
+networks:
+  mi-red:
+    name: micro

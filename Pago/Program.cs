@@ -1,7 +1,12 @@
+using Aforo255.Cross.Event.Src;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Pago.Datos;
+using Pago.Mensajes.Comandos;
+using Pago.Mensajes.ManejadoresComandos;
 using Pago.Persistencia;
 using Pago.Servicios;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +18,9 @@ builder.Services.AddDbContext<BaseDatosContexto>(
     }
 );
 builder.Services.AddScoped<IPagoService, PagoService>();
+builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
+builder.Services.AddRabbitMQ();
+builder.Services.AddTransient<IRequestHandler<CrearPagoCommand, bool>, PagoCommandHandler>();
 
 var app = builder.Build();
 

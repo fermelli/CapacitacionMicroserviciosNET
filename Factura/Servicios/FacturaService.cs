@@ -13,4 +13,16 @@ public class FacturaService: IFacturaService
     {
         return _baseDatosContexto.Factura.ToList();
     }
+
+    public void CambiarEstado(int idFactura)
+    {
+        var factura = _baseDatosContexto.Factura.FirstOrDefault(i => i.IdFactura == idFactura);
+
+        if (factura != null)
+        {
+            factura.Estado += 1;
+
+            _baseDatosContexto.SaveChanges();
+        }
+    }
 }

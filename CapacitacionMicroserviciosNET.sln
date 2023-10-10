@@ -7,16 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		docker-compose-base-datos.yml = docker-compose-base-datos.yml
+		docker-compose-servicios.yml = docker-compose-servicios.yml
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguridad", "Seguridad\Seguridad.csproj", "{D9D92E95-16D2-44E0-8178-108EE6AC5A71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factura", "Factura\Factura.csproj", "{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factura", "Factura\Factura.csproj", "{32FCFA4A-E684-4A5A-9E99-3AA7FD4CD0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pago", "Pago\Pago.csproj", "{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pago", "Pago\Pago.csproj", "{FD5CA80F-EEC8-4BBE-99AD-E32C96EB89CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaccion", "Transaccion\Transaccion.csproj", "{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaccion", "Transaccion\Transaccion.csproj", "{C45A1B27-E25A-4A81-B7BD-24F58F4B9060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
