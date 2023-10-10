@@ -22,15 +22,16 @@ public class TransaccionService: ITransaccionService
         return true;
     }
 
-    public async Task<IEnumerable<TransaccionResponse>> ObtenerFacturaPorId(int idInvoce)
+    public async Task<IEnumerable<TransaccionResponse>> ObtenerFacturaPorId(int idFactura)
     {
-        var resultado = await _baseDatosColeccion.Find(transaccion => transaccion.IdFactura == idInvoce).ToListAsync();
+        var resultado = await _baseDatosColeccion.Find(transaccion => transaccion.IdFactura == idFactura).ToListAsync();
         var respuesta = new List<TransaccionResponse>();
 
         foreach (var item in resultado)
         {
             respuesta.Add(new TransaccionResponse()
             {
+                IdTransaccion = item.IdTransaccion,
                 IdFactura = item.IdFactura,
                 Monto = item.Monto,
                 Fecha = item.Fecha,
