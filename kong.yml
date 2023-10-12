@@ -3,6 +3,10 @@ _format_version: "2.1"
 services:
   - name: app-seguridad
     url: http://host.docker.internal:5001/api/autenticacion
+    plugins:
+      - name: jwt
+        config:
+          anonymous: 9ddccc14-6866-584f-a82b-51e47864af89
     routes:
       - name: ruta-seguridad
         paths:
@@ -41,3 +45,16 @@ plugins:
     credentials: true
     max_age: 3600
     preflight_continue: false
+- name: jwt
+  config: 
+    secret_is_base64: false
+    run_on_preflight: true
+consumers:
+  - username: login_fermelli_issuer
+    custom_id: fermelli_id
+  - username: anonymous_users
+    id: 9ddccc14-6866-584f-a82b-51e47864af89
+jwt_secrets:
+  - consumer: login_fermelli_issuer
+    secret: "Mellizo55Mellizo55"
+  - consumer: anonymous_users

@@ -165,5 +165,35 @@
 				}
 			]
 		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTcxMDg1NTgsImlzcyI6Imt3c2NHMW9nbFZkSjB0Y1NBaFNocjgxeWpBdUxVVVdKIiwiYXVkIjoid2ViIn0.oevGkfWdi4X366hbvO-wTLsOm4HxZ1vPkaQBTnxE93g",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
 	]
 }
