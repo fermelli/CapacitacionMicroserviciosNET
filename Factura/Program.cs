@@ -7,6 +7,7 @@ using Factura.Servicios;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Factura.Mensajes.ManejadoresEventos;
+using Aforo255.Cross.Discovery.Consul;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,11 +23,13 @@ builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddRabbitMQ();
 builder.Services.AddTransient<PagoCreadoEventHandler>();
 builder.Services.AddTransient<IEventHandler<PagoCreadoEvent>, PagoCreadoEventHandler>();
+builder.Services.AddConsul();
 
 var app = builder.Build();
 
 app.UseAuthorization();
 app.MapControllers();
+app.UseConsul();
 
 BaseDatosInicializada.CrearBaseDatosSinoExiste(app);
 
