@@ -1,0 +1,43 @@
+_format_version: "2.1"
+
+services:
+  - name: app-seguridad
+    url: http://host.docker.internal:5001/api/autenticacion
+    routes:
+      - name: ruta-seguridad
+        paths:
+          - /api/autenticacion
+  - name: app-factura
+    url: http://host.docker.internal:5002/api/factura
+    routes:
+      - name: ruta-factura
+        paths:
+          - /api/factura
+  - name: app-pago
+    url: http://host.docker.internal:5003/api/pago
+    routes:
+      - name: ruta-pago
+        paths:
+          - /api/pago
+  - name: app-transaccion
+    url: http://host.docker.internal:5004/api/transaccion
+    routes:
+      - name: ruta-transaccion
+        paths:
+          - /api/transaccion
+
+plugins:
+- name: cors
+  config: 
+    origins:
+    - "*"
+    methods:
+    - GET
+    - POST
+    headers:
+    - "*"
+    exposed_headers:
+    - "*"
+    credentials: true
+    max_age: 3600
+    preflight_continue: false

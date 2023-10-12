@@ -15,12 +15,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5001/api/autenticacion",
+							"raw": "http://localhost:8000/api/autenticacion",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "8000",
 							"path": [
 								"api",
 								"autenticacion"
@@ -44,12 +44,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5001/api/autenticacion",
+							"raw": "http://localhost:8000/api/autenticacion",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5001",
+							"port": "8000",
 							"path": [
 								"api",
 								"autenticacion"
@@ -69,12 +69,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5002/api/factura",
+							"raw": "http://localhost:8000/api/factura",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5002",
+							"port": "8000",
 							"path": [
 								"api",
 								"factura"
@@ -94,12 +94,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5003/api/pago",
+							"raw": "http://localhost:8000/api/pago",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8000",
 							"path": [
 								"api",
 								"pago"
@@ -123,12 +123,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5003/api/pago",
+							"raw": "http://localhost:8000/api/pago",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5003",
+							"port": "8000",
 							"path": [
 								"api",
 								"pago"
@@ -148,12 +148,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5004/api/transaccion/1",
+							"raw": "http://localhost:8000/api/transaccion/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "5004",
+							"port": "8000",
 							"path": [
 								"api",
 								"transaccion",

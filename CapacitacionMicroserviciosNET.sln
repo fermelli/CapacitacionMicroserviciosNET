@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		docker-compose-base-datos.yml = docker-compose-base-datos.yml
+		docker-compose-gateway.yml = docker-compose-gateway.yml
 		docker-compose-servicios.yml = docker-compose-servicios.yml
+		kong.yml = kong.yml
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
