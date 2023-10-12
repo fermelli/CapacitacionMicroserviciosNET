@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controladores\" />
     <Folder Include="Datos\" />
     <Folder Include="DTOs\" />
     <Folder Include="Persistencia\" />
   </ItemGroup>
 
   <ItemGroup>
+	<PackageReference Include="Aforo255.Cross.Discovery" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
 	<PackageReference Include="Aforo255.Cross.Token" Version="6.0.0" />
   </ItemGroup>

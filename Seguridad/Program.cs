@@ -1,3 +1,4 @@
+using Aforo255.Cross.Discovery.Consul;
 using Aforo255.Cross.Token.Src;
 using Microsoft.EntityFrameworkCore;
 using Seguridad.Datos;
@@ -15,11 +16,13 @@ builder.Services.AddDbContext<BaseDatosContexto>(
 );
 builder.Services.AddScoped<IAutenticacionService, AutenticacionService>();
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("jwt"));
+builder.Services.AddConsul();
 
 var app = builder.Build();
 
 app.UseAuthorization();
 app.MapControllers();
+app.UseConsul();
 
 BaseDatosCreada.CrearBaseDatosSiNoExiste(app);
 
