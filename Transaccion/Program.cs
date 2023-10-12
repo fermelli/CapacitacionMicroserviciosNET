@@ -7,6 +7,7 @@ using Transaccion.Persistencia.Configuraciones;
 using Transaccion.Servicios;
 using AFORO255.MS.TEST.Transactiones.EventHandlers;
 using Factura.Mensajes.Eventos;
+using Aforo255.Cross.Discovery.Consul;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,10 +23,15 @@ builder.Services.AddMediatR(typeof(Program));
 builder.Services.AddRabbitMQ();
 builder.Services.AddTransient<PagoCreadoEventHandler>();
 builder.Services.AddTransient<IEventHandler<PagoCreadoEvent>, PagoCreadoEventHandler>();
+builder.Services.AddControllers();
+builder.Services.AddConsul();
 
 var app = builder.Build();
 
 app.MapCarter();
+app.UseAuthorization();
+app.MapControllers();
+app.UseConsul();
 
 ConfigureEventBus(app);
 
