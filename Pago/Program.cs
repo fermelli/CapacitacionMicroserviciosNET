@@ -1,3 +1,4 @@
+using Aforo255.Cross.Discovery.Consul;
 using Aforo255.Cross.Event.Src;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -21,11 +22,13 @@ builder.Services.AddScoped<IPagoService, PagoService>();
 builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 builder.Services.AddRabbitMQ();
 builder.Services.AddTransient<IRequestHandler<CrearPagoCommand, bool>, PagoCommandHandler>();
+builder.Services.AddConsul();
 
 var app = builder.Build();
 
 app.UseAuthorization();
 app.MapControllers();
+app.UseConsul();
 
 BaseDatosCreada.CrearBaseDatosSinoExiste(app);
 
