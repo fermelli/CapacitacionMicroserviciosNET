@@ -8,6 +8,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Factura.Mensajes.ManejadoresEventos;
 using Aforo255.Cross.Discovery.Consul;
+using Aforo255.Cross.Discovery.Fabio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddRabbitMQ();
 builder.Services.AddTransient<PagoCreadoEventHandler>();
 builder.Services.AddTransient<IEventHandler<PagoCreadoEvent>, PagoCreadoEventHandler>();
 builder.Services.AddConsul();
+builder.Services.AddFabio();
 
 var app = builder.Build();
 

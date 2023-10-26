@@ -8,6 +8,7 @@ using Transaccion.Servicios;
 using AFORO255.MS.TEST.Transactiones.EventHandlers;
 using Factura.Mensajes.Eventos;
 using Aforo255.Cross.Discovery.Consul;
+using Aforo255.Cross.Discovery.Fabio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +26,7 @@ builder.Services.AddTransient<PagoCreadoEventHandler>();
 builder.Services.AddTransient<IEventHandler<PagoCreadoEvent>, PagoCreadoEventHandler>();
 builder.Services.AddControllers();
 builder.Services.AddConsul();
+builder.Services.AddFabio();
 
 var app = builder.Build();
 

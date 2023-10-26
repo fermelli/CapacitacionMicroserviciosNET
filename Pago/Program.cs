@@ -1,4 +1,5 @@
 using Aforo255.Cross.Discovery.Consul;
+using Aforo255.Cross.Discovery.Fabio;
 using Aforo255.Cross.Event.Src;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 builder.Services.AddRabbitMQ();
 builder.Services.AddTransient<IRequestHandler<CrearPagoCommand, bool>, PagoCommandHandler>();
 builder.Services.AddConsul();
+builder.Services.AddFabio();
 
 var app = builder.Build();
 
