@@ -34,6 +34,16 @@ services:
     - mi-red
     depends_on:
     - consul-service
+  nacos-service:
+    image: nacos/nacos-server:v2.0.3
+    container_name: nacos-service 
+    restart: always
+    environment:
+    - MODE=standalone
+    ports:
+    - 8848:8848
+    networks:
+    - mi-red
 
 networks:
   mi-red:

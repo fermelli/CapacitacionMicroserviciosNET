@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B43ED05-8802-4368-AB94-D3DB5CC87B23}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		configuraciones.json = configuraciones.json
 		docker-compose-base-datos.yml = docker-compose-base-datos.yml
 		docker-compose-gateway.yml = docker-compose-gateway.yml
 		docker-compose-servicios.yml = docker-compose-servicios.yml

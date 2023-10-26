@@ -12,11 +12,16 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.ConfigureAppConfiguration((host, builder) =>
+{
+    IConfigurationRoot config = builder.Build();
+    builder.AddNacosConfiguration(config.GetSection("nacosConfig"));
+});
 builder.Services.AddControllers();
 builder.Services.AddDbContext<BaseDatosContexto>(
     opt =>
     {
-        opt.UseMySQL(builder.Configuration["mysql:cn"]);
+        opt.UseMySQL(builder.Configuration["cn:mysql"]);
     }
 );
 builder.Services.AddScoped<IPagoService, PagoService>();

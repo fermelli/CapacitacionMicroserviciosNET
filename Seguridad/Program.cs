@@ -8,11 +8,16 @@ using Seguridad.Servicios;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.ConfigureAppConfiguration((host, builder) =>
+{
+    IConfigurationRoot config = builder.Build();
+    builder.AddNacosConfiguration(config.GetSection("nacosConfig"));
+});
 builder.Services.AddControllers();
 builder.Services.AddDbContext<BaseDatosContexto>(
     opt =>
     {
-        opt.UseSqlServer(builder.Configuration["sql:cn"]);
+        opt.UseSqlServer(builder.Configuration["cn:sql"]);
     }
 );
 builder.Services.AddScoped<IAutenticacionService, AutenticacionService>();

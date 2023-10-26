@@ -12,11 +12,16 @@ using Aforo255.Cross.Discovery.Fabio;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.ConfigureAppConfiguration((host, builder) =>
+{
+    IConfigurationRoot config = builder.Build();
+    builder.AddNacosConfiguration(config.GetSection("nacosConfig"));
+});
 builder.Services.AddCarter();
 builder.Services.Configure<BaseDatosMongoConfiguraciones>(opt =>
 {
-    opt.Conexion = builder.Configuration.GetSection("mongo:cn").Value;
-    opt.NombreBaseDatos = builder.Configuration.GetSection("mongo:database").Value;
+    opt.Conexion = builder.Configuration.GetSection("cn:mongo").Value;
+    opt.NombreBaseDatos = builder.Configuration.GetSection("cn:database").Value;
 });
 builder.Services.AddScoped<ITransaccionService, TransaccionService>();
 builder.Services.AddScoped<IBaseDatosMongoContexto, BaseDatosMongoContexto>();
